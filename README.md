@@ -1,6 +1,7 @@
 # KataReplacer
 
-Aplikasi Untuk mereplace Huruf dari Dari Kata - kata.
+Aplikasi Untuk mereplace Huruf dari Kata - kata.
+
 Download Aplikasinya lewat _Github Action_ dalam Repository ini untuk mendapatkan versi debug nya.
 
 # Tampilan
