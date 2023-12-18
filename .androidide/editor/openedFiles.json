@@ -1,0 +1,35 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/KataReplacer/app/src/main/java/qz/katareplacer/utils/KataReplacer.java",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 54,
+          "line": 3
+        },
+        "start": {
+          "column": 0,
+          "index": 54,
+          "line": 3
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/KataReplacer/app/src/main/java/qz/katareplacer/MainActivity.java",
+      "selection": {
+        "end": {
+          "column": 2,
+          "index": 731,
+          "line": 23
+        },
+        "start": {
+          "column": 2,
+          "index": 731,
+          "line": 23
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/KataReplacer/app/src/main/java/qz/katareplacer/MainActivity.java"
+}
