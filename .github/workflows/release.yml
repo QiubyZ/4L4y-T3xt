@@ -13,9 +13,8 @@ jobs:
       contents: write
       
     steps:
-      - uses: xresloader/upload-to-github-release@v1
-      - env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: "Menjalankan release.yml"
+        uses: xresloader/upload-to-github-release@v1
         with:
           default_release_name: 4LayT3xt
           branches: "main"
