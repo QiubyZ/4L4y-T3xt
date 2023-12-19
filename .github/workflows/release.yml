@@ -13,6 +13,6 @@ jobs:
     steps:
       - uses: xresloader/upload-to-github-release@v1
         with:
-          name: 4L4y T3xt
+          default_release_name: 4L4y T3xt
           branches: "main"
           file: "./app/build/outputs/apk/debug/app-debug.apk"
