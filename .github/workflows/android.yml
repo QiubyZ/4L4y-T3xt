@@ -13,7 +13,7 @@ jobs:
       contents: write
       
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Setting JDK 17
       uses: actions/setup-java@v3
@@ -34,8 +34,9 @@ jobs:
           name: 4LayT3xt
           path: ./app/build/outputs/apk/debug/app-debug.apk
     
+    - uses: actions/checkout@v4
     - name: Panggil File release.yml
-      uses: ./.github/workflows/release.yml@main
+      uses: ./.github/workflows/release.yml
       with:
         release: false
       
