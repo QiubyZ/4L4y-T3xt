@@ -34,9 +34,4 @@ jobs:
           name: 4LayT3xt
           path: ./app/build/outputs/apk/debug/app-debug.apk
     
-    - uses: actions/checkout@v4
-    - name: Panggil File release.yml
-      uses: ./.github/workflows/release.yml
-      with:
-        release: false
       
