@@ -46,7 +46,7 @@ jobs:
       with:
         file: ${{env.FILE_OUTPUT}}
         tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+        prelease: true
         tags: true
         verbose: true
         draft: true
