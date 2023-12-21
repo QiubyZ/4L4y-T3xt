@@ -5,7 +5,10 @@ on:
     branches: ["main"]
   pull_request:
     branches: [ "main" ]
-
+    
+env:
+  filebuild: ./app/build/outputs/apk/debug/app-debug.apk
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,7 +35,16 @@ jobs:
       uses: actions/upload-artifact@v3.1.3
       with:
           name: 4LayT3xt
-          path: ./app/build/outputs/apk/debug/app-debug.apk
+          path: $filebuild
     
-
+    - name: Upload Release
+      uses: xresloader/upload-to-github-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+      with:
+        release_name: ${{github.ref}}
+        file: $filebuild
+        tags: true
+        draft: true
       

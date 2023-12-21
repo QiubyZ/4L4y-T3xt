@@ -29,7 +29,22 @@
           "line": 3
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/AndroidIDEProjects/4L4y-T3xt/.github/workflows/main.yml",
+      "selection": {
+        "end": {
+          "column": 8,
+          "index": 923,
+          "line": 43
+        },
+        "start": {
+          "column": 8,
+          "index": 923,
+          "line": 43
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/4L4y-T3xt/build.gradle"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/4L4y-T3xt/.github/workflows/main.yml"
 }
