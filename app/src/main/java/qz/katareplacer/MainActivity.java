@@ -1,5 +1,7 @@
 package qz.katareplacer;
 
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.text.Editable;
 import android.text.TextWatcher;
 import androidx.appcompat.app.AppCompatActivity;
@@ -49,7 +51,15 @@ public class MainActivity extends AppCompatActivity {
 					
 					}
                 });
+		
+		binding.copy.setOnClickListener((v) -> copyText(binding.result.getText().toString()));
+		binding.clear.setOnClickListener((v) -> binding.text.setText(""));
+		
     }
+	void copyText(String s){
+		ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+		cm.setText(s);
+	}
 
     @Override
     protected void onDestroy() {
