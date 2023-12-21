@@ -44,6 +44,8 @@ jobs:
         
       with:
         file: $filebuild
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
         tags: true
         draft: true
       
