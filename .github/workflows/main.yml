@@ -13,7 +13,7 @@ jobs:
       contents: write
       
     env:
-        TAG: Download Aplikasi
+        TAG: Release
         PROJECT_NAME: ${{github.event.repository.name}}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         FILE_OUTPUT: ./app/build/outputs/apk/debug/app-debug.apk
