@@ -54,11 +54,14 @@ jobs:
           prerelease: false
              
     - name: Upload Release
-      uses: xresloader/upload-to-github-release@v1
+      uses: actions/upload-release-asset@v1
       with:
-        file: ${{env.FILE_OUTPUT}}
-        tag_name: "${{env.TAG}}-${{github.run_number}}"
+        upload_url: ${{ steps.release-id.outputs.upload_url }}
+        asset_path: ${{env.FILE_OUTPUT}}
         asset_name: ${{env.PROJECT_NAM}}-${{github.run_number}}.apk
         asset_content_type: application/vnd.android.package-archive
-        tags: true
+        
+        #file: ${{env.FILE_OUTPUT}}
+        #tag_name: "${{env.TAG}}-${{github.run_number}}"
+        #tags: true
       
