@@ -1,20 +1,20 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/AndroidIDEProjects/4L4y-T3xt/.github/workflows/main.yml",
+      "file": "/storage/emulated/0/AndroidIDEProjects/4L4y-T3xt/gradle/wrapper/gradle-wrapper.properties",
       "selection": {
         "end": {
-          "column": 20,
-          "index": 216,
-          "line": 15
+          "column": 0,
+          "index": 0,
+          "line": 0
         },
         "start": {
-          "column": 20,
-          "index": 216,
-          "line": 15
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/4L4y-T3xt/.github/workflows/main.yml"
+  "selectedFile": "/storage/emulated/0/AndroidIDEProjects/4L4y-T3xt/gradle/wrapper/gradle-wrapper.properties"
 }
