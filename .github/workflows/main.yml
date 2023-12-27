@@ -58,5 +58,7 @@ jobs:
       with:
         file: ${{env.FILE_OUTPUT}}
         tag_name: "${{env.TAG}}-${{github.run_number}}"
+        asset_name: ${{env.PROJECT_NAM}}-${{github.run_number}}.apk
+        asset_content_type: application/vnd.android.package-archive
         tags: true
       
