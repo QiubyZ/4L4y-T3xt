@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 import qz.katareplacer.databinding.ActivityMainBinding;
 import qz.katareplacer.utils.KataReplacer;
+import qz.katareplacer.utils.ProfilMap;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
@@ -23,43 +24,37 @@ public class MainActivity extends AppCompatActivity {
 
         // set content view to binding's root
         setContentView(binding.getRoot());
-		
-		Map<Character, Character> defaultMap = new HashMap<>();
-        defaultMap.put('a', '4');
-        defaultMap.put('i', '1');
-        defaultMap.put('t', '7');
-        defaultMap.put('g', '9');
-        defaultMap.put('e', '3');
-		
+
         binding.text.addTextChangedListener(
                 new TextWatcher() {
 
                     @Override
                     public void beforeTextChanged(
                             CharSequence arg0, int arg1, int arg2, int arg3) {
-								
-							}
+
+                    }
 
                     @Override
                     public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
-					    String kata = KataReplacer.generator(arg0.toString(), defaultMap);
-						binding.result.setText(kata);
-					}
+                        String kata = KataReplacer.generator(arg0.toString(), new ProfilMap().DefaultSettings());
+                        binding.result.setText(kata);
+                    }
 
                     @Override
                     public void afterTextChanged(Editable arg0) {
-					
-					}
-                });
-		
-		binding.copy.setOnClickListener((v) -> copyText(binding.result.getText().toString()));
-		binding.clear.setOnClickListener((v) -> binding.text.setText(""));
-		
+
+                    }
+                });:TextWatcher
+
+        binding.copy.setOnClickListener((v) -> copyText(binding.result.getText().toString()));
+        binding.clear.setOnClickListener((v) -> binding.text.setText(""));
+
     }
-	void copyText(String s){
-		ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-		cm.setText(s);
-	}
+
+    void copyText(String s) {
+        ClipboardManager cm = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+        cm.setText(s);
+    }
 
     @Override
     protected void onDestroy() {
