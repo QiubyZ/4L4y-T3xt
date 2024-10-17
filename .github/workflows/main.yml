@@ -17,5 +17,5 @@ jobs:
           gradle_cmd: "assembleDebug" # this is will write apk filename /app-release-unsigned.apk
           tag: "Production"
           body_release: |
-            * Add Text Selection actions
+            * Add TextSelectionMenu To All App
           file_output: "./app/build/outputs/apk/debug/app-debug.apk"
