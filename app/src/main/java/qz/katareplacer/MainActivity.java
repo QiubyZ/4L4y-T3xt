@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     public void afterTextChanged(Editable arg0) {
 
                     }
-                });:TextWatcher
+                });
 
         binding.copy.setOnClickListener((v) -> copyText(binding.result.getText().toString()));
         binding.clear.setOnClickListener((v) -> binding.text.setText(""));
