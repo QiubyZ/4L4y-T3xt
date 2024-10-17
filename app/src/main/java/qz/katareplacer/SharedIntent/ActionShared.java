@@ -21,10 +21,7 @@ public class ActionShared extends Activity {
     var text = getIntent().getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT);
     var readOnly = getIntent().getBooleanExtra(Intent.EXTRA_PROCESS_TEXT_READONLY, false);
     if (text != null && !readOnly) {
-      Toast.makeText(this, text.toString(), 5).show();
-
       ProfilMap defaultSettings = new ProfilMap();
-
       setResult(Activity.RESULT_OK,
           new Intent().putExtra(
               Intent.EXTRA_PROCESS_TEXT,
