@@ -12,4 +12,21 @@ public class KataReplacer {
         }
         return kata;
     }
+    public static String generatorStringBuilder(String kata, Map<Character, Character> gantiHuruf) {
+        // Gunakan StringBuilder untuk membangun string hasil
+        StringBuilder hasil = new StringBuilder(kata);
+
+        // Iterasi melalui setiap karakter dalam string
+        for (int i = 0; i < hasil.length(); i++) {
+            char huruf = hasil.charAt(i);
+            // Periksa apakah karakter ada dalam map
+            if (gantiHuruf.containsKey(huruf)) {
+                // Ganti karakter pada indeks tertentu
+                hasil.setCharAt(i, gantiHuruf.get(huruf));
+            }
+        }
+
+        // Konversi StringBuilder ke String dan kembalikan hasilnya
+        return hasil.toString();
+    }
 }

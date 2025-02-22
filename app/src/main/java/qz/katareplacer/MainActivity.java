@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Inflate and get instance of binding
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-
+        
         // set content view to binding's root
         setContentView(binding.getRoot());
 
@@ -36,8 +36,12 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
-                        String kata = KataReplacer.generator(arg0.toString(), new ProfilMap().DefaultSettings());
-                        binding.result.setText(kata);
+                        // String kata = KataReplacer.generator(arg0.toString(), new ProfilMap().DefaultSettings());
+                        // binding.result.setText(kata);
+                        
+                        String kata = KataReplacer.generatorStringBuilder(arg0.toString(), new ProfilMap().DefaultSettings());
+                        
+                        binding.result.setText(kata.toString());
                     }
 
                     @Override
