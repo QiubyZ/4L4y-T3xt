@@ -44,7 +44,7 @@ jobs:
           tag_name: ${{ github.event.repository.name }}
           name: ${{ github.event.repository.name }}
           files: ${{ env.apk_file }}
-          draft: true
+          draft: false
           prerelease: false
           generate_release_notes: true
           token: ${{ secrets.GITHUB_TOKEN }}         
